@@ -256,7 +256,7 @@ def test_inlist(v, thelist):
 
 
 class JinjaRenderer(object):
-    def __init__(self, rootdir, templatefile, fonts, debug=False, systemroot=None, orientation='portrait', pagesize='A4'):
+    def __init__(self, rootdir, templatefile, fonts, debug=False, systemroot=None, orientation='portrait', pagesize='letter'):
         if rootdir:
             self.templatedir = os.path.join(rootdir, 'templates')
         else:
@@ -335,7 +335,7 @@ class JinjaRenderer(object):
             self.story.append(PageBreak())
 
     def render(self, output):
-        doc = SimpleDocTemplate(output, pagesize=self.pagesize, leftMargin=10 * mm, topMargin=5 * mm, rightMargin=10 * mm, bottomMargin=5 * mm)
+        doc = SimpleDocTemplate(output, pagesize=self.pagesize, leftMargin=25 * mm, topMargin=25 * mm, rightMargin=25 * mm, bottomMargin=25 * mm)
         doc.build(self.story)
 
 

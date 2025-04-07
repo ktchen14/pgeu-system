@@ -430,6 +430,9 @@ if __name__ == "__main__":
         ('DejaVu Sans Mono Italic', '{}/DejaVuSansMono-Oblique.ttf'.format(args.fontroot)),
         ('DejaVu Sans Mono Bold', '{}/DejaVuSansMono-Bold.ttf'.format(args.fontroot)),
         ('DejaVu Sans Mono Bold Italic', '{}/DejaVuSansMono-BoldOblique.ttf'.format(args.fontroot)),
+
+        ('Tahoma', 'tahoma.ttf'),
+        ('Tahoma Bold', 'tahomabd.ttf'),
     ]
 
     if args.font:

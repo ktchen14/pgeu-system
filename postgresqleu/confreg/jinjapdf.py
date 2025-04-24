@@ -111,6 +111,12 @@ class JinjaFlowable(Flowable):
                        fill=fill)
 
     def draw_line(self, o):
+        if 'stroke' in o:
+            if o['stroke'] is True or o['stroke'] == '1':
+                self.canv.setStrokeColorRGB(0, 0, 0)
+            else:
+                self.canv.setStrokeColor(get_color(o['stroke']))
+
         if 'x2' in o and 'y2' in o:
             self.canv.line(getmm(o, 'x'),
                            self.height - getmm(o, 'y'),
